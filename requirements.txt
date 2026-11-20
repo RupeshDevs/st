@@ -11,6 +11,5 @@ primp
 pyfiglet
 playwright
 truedriver
-python
 flask
 gunicorn
