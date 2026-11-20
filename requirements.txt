@@ -13,4 +13,3 @@ playwright
 truedriver
 flask
 gunicorn
-webview
