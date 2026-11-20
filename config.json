@@ -1,0 +1,91 @@
+{
+    "threads": 2,
+    "threading": {
+        "generator": 1,
+        "joiner": 100,
+        "proxy_checker": 50,
+        "checker": 10,
+        "humanizer": 3
+    },
+    "censor": true,
+    "9captcha": {
+        "api_key": "",
+        "extension_solver": true,
+        "req_solver": false
+    },
+    "mail_services": {
+        "duckmail": {
+            "enabled": true,
+            "password": "9captcha@minex@op@WW"
+        },
+        "cybertemp": {
+            "enabled": false,
+            "api_key": "",
+            "domains": [
+                "sexymeowers.site",
+                "xpromail.xyz",
+                "securitybot.online"
+            ]
+        },
+        "tempmail_lol": {
+            "enabled": false
+        },
+        "hotmail007": {
+            "enabled": false,
+            "client_key": ""
+        },
+        "lution": {
+            "enabled": false,
+            "api_key": "",
+            "mailcode": "outlook2"
+        },
+        "zeus": {
+            "enabled": false,
+            "api_key": "",
+            "mailcode": "Hotmail_Trusted"
+        },
+        "draxono": {
+            "enabled": false,
+            "api_key": ""
+        },
+        "mailcow": {
+            "enabled": false,
+            "api_key": "",
+            "host": "",
+            "domain": ""
+        }
+    },
+    "verification": {
+        "enabled": true
+    },
+    "humanizer": {
+        "enabled": true,
+        "retries": 3,
+        "max_threads": 1,
+        "avatar_dimension": 256,
+        "max_avatar_cache": 100,
+        "avatar": true,
+        "pronouns": true,
+        "bio": true,
+        "display_name": true,
+        "banner": false,
+        "hypesquad": true
+    },
+    "auth_joiner": {
+        "bot": {
+            "id": "",
+            "secret": "",
+            "token": ""
+        },
+        "web": {
+            "url": "http://localhost:3001"
+        },
+        "data": {
+            "guildId": ""
+        }
+    },
+    "cloudflare_warp": {
+        "enabled": false
+    },
+    "theme_accent": "#cf19c6"
+}
