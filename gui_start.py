@@ -7,6 +7,8 @@ import time
 import threading
 from collections import deque
 
+from flask import Flask, render_template
+
 try:
     import webview
 except ImportError:
