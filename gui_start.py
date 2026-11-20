@@ -342,18 +342,25 @@ class WindowController:
 if __name__ == "__main__":
     controller = WindowController()
 
-    threading.Thread(target=lambda: app.run(
-        debug=False, port=5001, use_reloader=False
-    ), daemon=True).start()
+    if os.environ.get("RENDER") or webview is None:
+        # Render (or no pywebview): run Flask directly, no window
+        port = int(os.environ.get("PORT", 5001))
+        app.run(host="0.0.0.0", port=port, debug=False, use_reloader=False)
+    else:
+        # Your PC: Flask in the background + desktop window
+        threading.Thread(target=lambda: app.run(
+            debug=False, port=5001, use_reloader=False
+        ), daemon=True).start()
 
-    time.sleep(0.8)
+        time.sleep(0.8)
 
-    webview.create_window(
-        title="9DEVS V4",
-        url="https://st-738m.onrender.com",
-        js_api=controller,
-        width=1000, height=660,
-        frameless=False,
-    )
-
-    webview.start(debug=False, gui="edgechromium", icon=os.path.join(BASE_DIR, "gui_static", "9captcha-logo.ico"))
+        # ⬇ paste your existing webview.create_window(...) and
+        #   webview.start() lines here, exactly as they were
+        webview.create_window(
+            "Title",  # keep your own title
+            url="https://st-738m.onrender.com",
+            js_api=controller,
+            width=1000, height=660,
+            frameless=False,
+        )
+        webview.start()
