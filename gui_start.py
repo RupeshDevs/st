@@ -8,7 +8,10 @@ import threading
 from collections import deque
 
 from flask import Flask, render_template
-import webview
+try:
+    import webview
+except ImportError:
+    webview = None
 
 # ──── Environment ────
 if os.name == "nt":
